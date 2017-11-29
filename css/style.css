@@ -1,0 +1,259 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;   
+    background: rgb(214, 214, 214);
+}
+
+ul{
+   
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+/* 
+@media (min-width: 1200px){
+} */
+
+
+/***** LOGIN/SIGNUP *****/ 
+
+.login-signup-container{
+    display: flex;
+    height: 100%;
+}
+
+.box{
+    background: white;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+}
+
+.forms{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.forms input{
+    background: rgb(214, 214, 214);
+    display: block;
+    border: none;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 5px;
+    
+}
+
+.forms input[type="submit"]{
+    background: rgb(46, 46, 46);
+    color:white;
+}
+
+.forms input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.forms p{
+    font-size: 12px;
+}
+
+/***** END LOGIN/SIGNUP *****/
+
+/* INDEX */ 
+
+.index-container{
+    min-height: 800px;
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction:column;
+    margin: auto;
+}
+
+.header{
+    background: white;
+    width: 90%;
+    height: 25%;
+    display: flex;
+    margin: 0 auto;
+}
+
+#wrapper-header{
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+}
+
+#user-info{
+    display: flex;
+    flex: 3;
+    border-right:1px groove rgb(214, 214, 214);
+    flex-direction: column;
+}
+
+#img{
+    flex: 10;
+    display: flex;
+}
+
+
+#img img{
+    height: 95%;
+    width: 60%;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#user-name{
+    flex: 1;
+    text-align: center;
+}
+
+#form-item{
+    flex: 10;
+    display: flex;
+}
+
+#form-item form{
+    margin: auto;
+}
+
+#form-item input[type="text"]{
+    padding: 10px;
+    float: left;
+    width: 600px;
+}
+
+#form-item input[type="submit"]{
+    color: white;
+    padding: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    float: left;
+    background: rgb(114, 114, 114);
+}
+
+#user-options{
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#options-list{
+    width: 30%;
+}
+
+#list{
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: right;
+}
+
+#list li{
+    float: left;
+    padding: 3px;
+
+}
+
+
+#wrapper-item{
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    border-top: 1px groove rgb(214, 214, 214);
+    background: white;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#username{
+    font-weight: bold;
+}
+
+.item{
+    background: rgb(214, 214, 214);
+    border-radius: 8px;
+    width: 80%;
+    height: 10%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.description{
+    display: flex;
+    flex: 10;
+    text-align: justify;
+}
+
+.description p{
+    margin: auto;
+    margin-left: 10px;
+}
+.button{
+    display: flex;
+    
+    flex: 0.5;
+}
+
+.button button{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: rgb(114, 114, 114);
+    margin: auto;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+/***** USERPAGE *****/
+
+#user-img{
+    background: red;
+    flex: 2;
+    display: flex;
+}
+
+
+#user-img img{
+    margin: auto;
+    width: 60%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+#profile-info{
+    flex: 8;
+}
+
+#profile-info{
+    text-align: left;
+}
+
+#profile-info h1{
+    text-align: center;
+}
+
+#profile-info li{
+    padding:4px;
+}
+
+#profile-info h1{
+    text-align: center;
+}
+/***** END USERPAGE *****/
