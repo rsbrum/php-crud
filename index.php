@@ -100,7 +100,7 @@
         var request = new XMLHttpRequest();
         var description = document.getElementById("item-description").value;
 
-        request.open("POST", "../0.7/php/includes/addItem.inc.php", true);
+        request.open("POST", "../php/includes/addItem.inc.php", true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.send("item-description="+description);
         request.onload = function(){
