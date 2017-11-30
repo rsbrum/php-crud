@@ -1,9 +1,10 @@
 <?php   
 
-    $connect = mysqli_connect("localhost", "root", "040182", "db_todolist");
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-    if(!$connect){
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
-        die("Database connection failed!");
-
-    }
+$connect = new mysqli($server, $username, $password, $db);
