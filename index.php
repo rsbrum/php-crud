@@ -75,15 +75,7 @@
             }else{
         ?>
 
-        <div class='item'>
-            <div class='description'>
                     <p>There are no tasks to be done</p>
-            </div>
-            
-            <div class='button'>
-                <button> X </button>
-            </div>
-        </div>
 
         <?php } ?>
     </div>
@@ -106,6 +98,8 @@
         request.onload = function(){
             document.getElementById("content").innerHTML = this.responseText;
         }
+
+        document.getElementById("item-description").value = "";
 
     }
 

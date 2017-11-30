@@ -12,7 +12,7 @@
         </div>
 
         <div id="profile-info">
-            <h1>Your information</h1>
+            <h1>/*work in progress */ Your information</h1>
                 <ul>
                     <li>Username: <?php echo $_SESSION['user_name']; ?></li>
                     <li>Email: <?php echo $_SESSION['user_email']; ?></li>
