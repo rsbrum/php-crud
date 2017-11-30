@@ -74,8 +74,9 @@
                 }
             }else{
         ?>
-
+                <div id="no-items">
                     <p>There are no tasks to be done</p>
+                </div>
 
         <?php } ?>
     </div>

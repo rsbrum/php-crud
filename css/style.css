@@ -185,6 +185,14 @@ a{
     font-weight: bold;
 }
 
+#no-item{
+    border-radius: 8px;
+    width: 80%;
+    height: 10%;
+    margin: 20px auto;
+    display: flex;
+}
+
 .item{
     background: rgb(214, 214, 214);
     border-radius: 8px;
