@@ -127,7 +127,7 @@
 </div>
 
 <?php }else{
-    header("Location: ../0.7/login.php");
+    header("Location: ../login.php");
 } ?>
 <?php
     include "./php/includes/footer.inc.php";
