@@ -7,24 +7,21 @@
 <div class="index-container">
     <div class="header">
     
-        <div id="user-img">
-            <img src="usertest.png" alt="userimg">
-        </div>
-
         <div id="profile-info">
             <h1>Your information</h1>
-                <ul>
-                    <li>Username: <?php echo $_SESSION['user_name']; ?></li>
-                    <li>Email: <?php echo $_SESSION['user_email']; ?></li>
-                    <li>ID: <?php echo $_SESSION['user_id']; ?></li>
-                </ul>
         </div>
 
     </div>
 
     <div class="content">
-        <h1>User stats</h1>
+
+        <form action="">
+            <img src="usertest.png" alt="">
+            <label for="userpg-email">Email:</label> <input name="userpg-email" type="text" value="<?php echo $_SESSION['user_email']; ?>" disabled>
+        </form>
+        
     </div>
+
 </div>
 
 

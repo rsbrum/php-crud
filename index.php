@@ -1,11 +1,3 @@
-<!-- 
-    
-    @todo
-
-    1-task system 
-    2-implement login system 
-    
--->
 
 <?php 
     include "./php/includes/header.inc.php";
@@ -127,7 +119,7 @@
 </div>
 
 <?php }else{
-    header("Location: ../0.7/login.php");
+    header("Location: ./login.php");
 } ?>
 <?php
     include "./php/includes/footer.inc.php";

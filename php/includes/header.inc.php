@@ -5,8 +5,8 @@
 ?>
 <html>
 <head>
-    <link rel="stylesheet" href="../0.7/css/style.css">
-    <script src="../0.7/js/main.js"></script>
+    <link rel="stylesheet" href="../todolist/css/style.css">
+    <script src="../todolist/js/main.js"></script>
 </head>
 
 <body>
