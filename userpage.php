@@ -18,7 +18,7 @@
 
         <div id="userpg-uinfo">
 
-            <form action="./php/includes/changeProfilepic.inc.php">
+            <form action="./php/includes/changeProfilePic.inc.php">
                     <div id="userpg-pic" class="userpg-wrapper">
                         <div class="userpg-label">
                         <img src="usertest.png" alt="">
