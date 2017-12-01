@@ -319,16 +319,17 @@ a{
 }
 
 #userpg-pic{
+    width: 35%;
     height: 10%;
     display: flex;
 }
 
-#userpg-pic button{
-    margin: auto;
+#userpg-pic input{
+    padding: 10px;
 }
 
 .userpg-input{
-    
+
     flex: 9;
     display: flex;
 }

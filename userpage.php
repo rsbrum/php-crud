@@ -18,19 +18,19 @@
 
         <div id="userpg-uinfo">
 
-            <form action="./php/includes/changeProfilePic.inc.php">
+            <form enctype="multipart/form-data" method="POST" action="./php/includes/updateProfile.inc.php">
                     <div id="userpg-pic" class="userpg-wrapper">
                         <div class="userpg-label">
                         <img src="usertest.png" alt="">
                         </div>
 
                         <div class="userpg-input">
-                            <input value="Change picture" type="submit" name="userpg-submit-pic">
+                            <input value="Change picture" type="file" name="userpg-pic">
                         </div>
                     </div>    
-            </form>  
+            
 
-            <form method="POST" action="./php/includes/updateProfile.inc.php">
+            
                     <div class="userpg-wrapper">
                         <div  class="userpg-label">
                             <p>Username:</p>
@@ -68,8 +68,8 @@
 
                         <div class="userpg-input">
                             <!-- header( index. php if isset(usetpage-goback)) -->
-                             <input type="submit" value="Go back" name="userpage-goback">
-                            <input type="submit" value="Save changes" name="userpage-submit">
+                             <input type="submit" value="Go back" name="userpg-goback">
+                            <input type="submit" value="Save changes" name="userpg-submit">
                 
                         </div>
                     </div>
