@@ -31,13 +31,13 @@
                 <div id="options-list">
                     <ul id="list">
                         <li><a href="./userpage.php">Profile</a></li>
-                        <li>Stats</li>
+                        <li><a href="#" >Stats </a></li>
                         <li><a href="./php/includes/logout.inc.php?action=logout">Logout </a></li>
                     </ul>
                 </div>
         </div>
 
-            <div id="form-item">
+        <div id="form-item">
                 <form method="POST" id="form-submit" action="./php/includes/addItem.inc.php">
                     <input type="text" name="item-description" id="item-description" placeholder="What do you have to do?">
                     <input type="submit" name="itemm-submit" id="itemm-submit">
@@ -53,6 +53,7 @@
             if(mysqli_num_rows($result) > 0){
                 while($row = $result->fetch_assoc()){
         ?>
+
         <div class='item'>
             <div class='description'>
                     <p><?php echo $row['item_description'] ?></p>
@@ -62,19 +63,14 @@
                 <button onclick="deleteItem(<?php echo $row['item_id']; ?>)"> X </button>
             </div>
         </div>
+
         <?php            
                 }
             }else{
         ?>
 
-        <div class='item'>
-            <div class='description'>
-                    <p>There are no tasks to be done</p>
-            </div>
-            
-            <div class='button'>
-                <button> X </button>
-            </div>
+        <div id='no-items'>
+            <p>There are no tasks to be done</p>
         </div>
 
         <?php } ?>

@@ -15,11 +15,68 @@
 
     <div class="content">
 
-        <form action="">
-            <img src="usertest.png" alt="">
-            <label for="userpg-email">Email:</label> <input name="userpg-email" type="text" value="<?php echo $_SESSION['user_email']; ?>" disabled>
-        </form>
-        
+
+        <div id="userpg-uinfo">
+
+            <form action="./php/includes/changeProfilepic.inc.php">
+                    <div id="userpg-pic" class="userpg-wrapper">
+                        <div class="userpg-label">
+                        <img src="usertest.png" alt="">
+                        </div>
+
+                        <div class="userpg-input">
+                            <input value="Change picture" type="submit" name="userpg-submit-pic">
+                        </div>
+                    </div>    
+            </form>  
+
+            <form method="POST" action="./php/includes/updateProfile.inc.php">
+                    <div class="userpg-wrapper">
+                        <div  class="userpg-label">
+                            <p>Username:</p>
+                        </div>
+
+                        <div class="userpg-input">
+                            <input name="userpg-username" type="text" value="<?php echo $_SESSION['user_name']; ?>" disabled>
+                        </div>
+                    </div>
+
+                    <div class="userpg-wrapper">
+                        <div class="userpg-label">
+                            <p>Email:</p>
+                        </div>
+
+                        <div class="userpg-input">
+                            <input name="userpg-useremail" type="text" value="<?php echo $_SESSION['user_email']; ?>" disabled>
+                        </div>
+                    </div>
+
+                    <div class="userpg-wrapper">
+                        <div class="userpg-label">
+                            <p>ID:</p>
+                        </div>
+
+                        <div class="userpg-input">
+                            <input name="userpg-userid" type="text" value="<?php echo $_SESSION['user_id']; ?>" disabled>
+                        </div>
+                    </div>
+
+                    <div class="userpg-wrapper">
+                        <div class="userpg-label">
+                            
+                        </div>
+
+                        <div class="userpg-input">
+                            <!-- header( index. php if isset(usetpage-goback)) -->
+                             <input type="submit" value="Go back" name="userpage-goback">
+                            <input type="submit" value="Save changes" name="userpage-submit">
+                
+                        </div>
+                    </div>
+            </form>
+                
+            </div>
+        </div>
     </div>
 
 </div>

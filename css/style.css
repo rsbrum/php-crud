@@ -116,20 +116,20 @@ a{
 }
 
 #img{
-    flex: 10;
+    flex: 5;
     display: flex;
 }
 
 
 #img img{
-    height: 95%;
-    width: 60%;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
     margin: auto;
 }
 
 #user-name{
-    flex: 1;
+    flex: 0.5;
     text-align: center;
 }
 
@@ -187,17 +187,31 @@ a{
     flex-direction: column;
 }
 
+#username{
+    font-weight: bold;
+}
+
+#no-items{
+    border-radius: 8px;
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+}
+
+#no-items p{
+    margin: auto;
+}
+
 .content{
     border-top: 1px groove rgb(214, 214, 214);
     background: white;
     width: 90%;
+    min-height: 500px;
     height: auto;
     margin: 0 auto;
 }
 
-#username{
-    font-weight: bold;
-}
 
 .item{
     background: rgb(214, 214, 214);
@@ -247,22 +261,9 @@ a{
 
 /***** USERPAGE *****/
 
-#user-img{
-    background: red;
-    flex: 2;
-    display: flex;
-}
-
-
-#user-img img{
-    margin: auto;
-    width: 60%;
-    height: 80%;
-    border-radius: 50%;
-}
-
 #profile-info{
-    flex: 8;
+    flex: 4;
+    display: flex;
 }
 
 #profile-info{
@@ -270,7 +271,7 @@ a{
 }
 
 #profile-info h1{
-    text-align: center;
+    margin: auto;
 }
 
 #profile-info li{
@@ -279,5 +280,60 @@ a{
 
 #profile-info h1{
     text-align: center;
+}
+
+#userpg-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#userpg-uinfo{
+    flex: 5;
+    margin-top: 30px; 
+}
+
+.userpg-wrapper{
+    height: 5%;
+    width: 28%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.userpg-label{
+    text-align: center;
+    flex: 4;
+    display: flex;
+}
+
+.userpg-label p{
+    margin: auto;
+}
+
+.userpg-label img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#userpg-pic{
+    height: 10%;
+    display: flex;
+}
+
+#userpg-pic button{
+    margin: auto;
+}
+
+.userpg-input{
+    
+    flex: 9;
+    display: flex;
+}
+
+.userpg-input input{
+    margin: auto;
 }
 /***** END USERPAGE *****/
