@@ -470,7 +470,7 @@ a{
     /* INDEX */ 
     
     .index-container{
-        min-height: 100%;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction:column;
@@ -506,8 +506,8 @@ a{
     
     
     #img img{
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
         border-radius: 50%;
         margin: auto;
     }
@@ -588,7 +588,7 @@ a{
         border-radius: 8px;
         width: 80%;
         height: 10%;
-        margin: auto;
+        margin: 20px auto;
         display: flex;
     }
     
