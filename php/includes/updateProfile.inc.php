@@ -31,7 +31,7 @@
             
             if(in_array($fileExt, $allowedExt)){
                 if($fileError === 0){
-                    if($fileSize < 500000){
+                    if($fileSize < 5000000){
                         
                         $fileNewName =  "profilepic".$_SESSION['user_id'].".".$fileExt;
 

@@ -91,7 +91,7 @@ a{
 .header{
     background: white;
     width: 90%;
-    height: 30%;
+    min-height: 160px;
     display: flex;
     margin: 0 auto;
 }
@@ -193,6 +193,7 @@ a{
 
 #username{
     font-weight: bold;
+    height: 10px;
 }
 
 #no-items{
@@ -368,15 +369,23 @@ a{
     padding: 10px;
 }
 
-.userpg-input{
-
-    flex: 9;
-    display: flex;
+.userpg-input input[type="submit"]{
+    color: white;
+    padding: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    background: rgb(114, 114, 114);
+    transition: 0.5s;
+    margin: auto;
 }
 
-.userpg-input input{
-    margin: auto;
-    padding: 5px;
+.userpg-input input[type="file"]{
+    margin: 25% auto;
+}
+
+.userpg-input input[type="submit"]:hover{
+    border: 2px solid rgb(29, 29, 29);
+    background: rgb(29, 29, 29);
+    cursor: pointer;
 }
 
 .userpg-input input:read-only, input:disabled{
@@ -416,8 +425,7 @@ a{
     
     .login-signup-container{
         display: flex;
-        height: 100%;
-        min-height: 100%;
+        height: 800px;
     }
     
     .box{
@@ -483,8 +491,7 @@ a{
     .header{
         background: white;
         width: 100%;
-        height: 30%;
-        min-height: 30%;
+        min-height: 35%;
         display: flex;
         margin: 0 auto;
     }
@@ -496,12 +503,12 @@ a{
     }
     
     #user-info{
-        display: flex;
-        flex: 3;
-        border-right:1px groove rgb(214, 214, 214);
-        flex-direction: column;
+        display: none;
+        flex: 0;
+        height: 0;
+        width: 0;
     }
-    
+ /*   
     #img{
         flex: 5;
         display: flex;
@@ -509,8 +516,8 @@ a{
     
     
     #img img{
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
         border-radius: 50%;
         margin: auto;
     }
@@ -518,7 +525,7 @@ a{
     #user-name{
         flex: 0.5;
         text-align: center;
-    }
+    } */
     
     #form-item{
         flex: 10;
@@ -530,20 +537,20 @@ a{
     }
     
     #form-item input[type="text"]{
-        padding: 7px;
-        display: block;
+        padding: 8px;
         margin: auto;
-        width: 200px;
+        display: block;
+        width: 400px;
     }
     
     #form-item input[type="submit"]{
         color: white;
-        padding: 7px;
+        padding: 8px;
         border: 2px solid rgb(114, 114, 114);
         display: block;
-        margin: 5px auto;
         background: rgb(114, 114, 114);
         transition: 0.5s;
+        margin: 5px auto;
     }
     
     #form-item input[type="submit"]:hover {
@@ -596,7 +603,7 @@ a{
     }
     
     #no-items p{
-        margin: auto;
+        margin: 40px auto;
         transition: 0.3s;
     }
     
@@ -700,19 +707,19 @@ a{
         height: 100%;
         display: flex;
         flex-direction: column;
-    
     }
     
     #userpg-uinfo{
         flex: 5;
-        margin-top: 30px; 
+        margin-top: 20px; 
     }
     
     .userpg-wrapper{
         height: 5%;
-        width: 28%;
+        width: 55%;
         margin: 20px auto;
         display: flex;
+
     }
     
     .userpg-label{
@@ -726,14 +733,14 @@ a{
     }
     
     .userpg-label img{
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
         border-radius: 50%;
     }
     
     #userpg-pic{
-        width: 30%;
-        height: 20%;
+        width:55%;
+        height: 25%;
         display: flex;
     }
     #userpg-pic img{
@@ -743,16 +750,38 @@ a{
     #userpg-pic input{
         padding: 10px;
     }
-    
-    .userpg-input{
-    
-        flex: 9;
-        display: flex;
+
+    #userpg-pic .userpg-input{
+        width: 60%;
+        height: 40px;
+        margin: 40px auto;
     }
     
-    .userpg-input input{
-        margin: auto;
-        padding: 5px;
+    .userpg-input{
+        flex: 9;
+        display: flex;
+        height: 30px;
+    }
+
+    .userpg-input input[type="text"]{
+        width: 100%;
+    }
+
+    .userpg-input input[type="submit"]{
+        color: white;
+        padding: 8px;
+        border: 2px solid rgb(114, 114, 114);
+        background: rgb(114, 114, 114);
+        transition: 0.5s;
+        margin-left: 5px;
+    }
+
+
+
+    .userpg-input input[type="submit"]:hover{
+        border: 2px solid rgb(29, 29, 29);
+        background: rgb(29, 29, 29);
+        cursor: pointer;
     }
     
     .userpg-input input:read-only, input:disabled{
