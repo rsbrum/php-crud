@@ -4,6 +4,8 @@
     if(isset($_SESSION['user_id'])){
 ?>
 
+
+
 <div class="index-container">
     <div class="header">
     
@@ -18,10 +20,14 @@
 
         <div id="userpg-uinfo">
 
+        <?php if(isset($_SESSION['errors'])){
+            echo $_SESSION['errors'];
+            unset($_SESSION['errors']);
+        } ?>
             <form enctype="multipart/form-data" method="POST" action="./php/includes/updateProfile.inc.php">
                     <div id="userpg-pic" class="userpg-wrapper">
                         <div class="userpg-label">
-                        <img src="usertest.png" alt="">
+                        <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>" alt="">
                         </div>
 
                         <div class="userpg-input">
@@ -29,15 +35,13 @@
                         </div>
                     </div>    
             
-
-            
                     <div class="userpg-wrapper">
                         <div  class="userpg-label">
                             <p>Username:</p>
                         </div>
 
                         <div class="userpg-input">
-                            <input name="userpg-username" type="text" value="<?php echo $_SESSION['user_name']; ?>" disabled>
+                            <input onclick="enableInput('userpg-username')" id ="userpg-username" name="userpg-username" type="text" value="<?php echo $_SESSION['user_name']; ?>" readonly="readonly">
                         </div>
                     </div>
 
@@ -47,7 +51,7 @@
                         </div>
 
                         <div class="userpg-input">
-                            <input name="userpg-useremail" type="text" value="<?php echo $_SESSION['user_email']; ?>" disabled>
+                            <input onclick="enableInput('userpg-useremail')" id="userpg-useremail"name="userpg-useremail" type="text" value="<?php echo $_SESSION['user_email']; ?>" readonly="readonly">
                         </div>
                     </div>
 
@@ -81,6 +85,13 @@
 
 </div>
 
+<script>
+
+    function enableInput(input){
+        
+        document.getElementById(input).removeAttribute('readonly');
+    }
+</script>
 
 <?php
     }else{

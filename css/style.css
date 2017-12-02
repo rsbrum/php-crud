@@ -88,7 +88,7 @@ a{
 .index-container{
     min-height: 800px;
     height: auto;
-    width: 80%;
+    min-width: 1200px;
     display: flex;
     flex-direction:column;
     margin: auto;
@@ -313,15 +313,20 @@ a{
 }
 
 .userpg-label img{
-    height: 100%;
-    width: 100%;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
 }
 
 #userpg-pic{
-    width: 35%;
+    width: 30%;
     height: 10%;
     display: flex;
+    margin-bottom: 40px;
+}
+
+#userpg-pic img{
+    margin: auto;
 }
 
 #userpg-pic input{
@@ -336,5 +341,14 @@ a{
 
 .userpg-input input{
     margin: auto;
+    padding: 5px;
 }
+
+.userpg-input input:read-only, input:disabled{
+    background: rgb(207, 207, 207);
+    border: none;
+    padding: 5px;
+
+}
+
 /***** END USERPAGE *****/

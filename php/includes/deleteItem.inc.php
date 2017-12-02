@@ -39,14 +39,9 @@
                                 }
             }else{
                 $output = "
-                    <div class='item'>
-                    <div class='description'>
-                        <p>There are no tasks to be done</p>
-                    </div>
-                    <div class='button'>
-                        <button> X </button>
-                    </div>
-                    </div>
+                <div id='no-items'>
+                    <p>There are no tasks to be done</p>
+                </div>
                     ";
                 
 

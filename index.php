@@ -19,7 +19,7 @@
 
         <div id="user-info">
             <div id="img">
-                <img src="usertest.png" alt="userimg">
+                <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>"  alt="userimg">
             </div>
             <div id="user-name">
                     <p id="username"><?php echo $_SESSION['user_name']; ?></p>
@@ -88,12 +88,14 @@
         var request = new XMLHttpRequest();
         var description = document.getElementById("item-description").value;
 
-        request.open("POST", "../php/includes/addItem.inc.php", true);
+        request.open("POST", "./php/includes/addItem.inc.php", true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.send("item-description="+description);
         request.onload = function(){
             document.getElementById("content").innerHTML = this.responseText;
         }
+
+        document.getElementById("item-description").value = "";
 
     }
 
