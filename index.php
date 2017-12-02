@@ -20,7 +20,7 @@
         <div id="user-info">
             <div id="img">
                 <?php if($_SESSION['user_profilepic']){?>
-                    <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>"  alt="userimg">
+                    <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>.jpg"  alt="userimg">
                 <?php }else{ ?>
                     <img src="./uploads/default.png"  alt="userimg">
                 <?php }; ?>
