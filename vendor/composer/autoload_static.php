@@ -8,6 +8,8 @@ class ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -17,6 +19,7 @@ class ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\HttpKernel\\' => 29,
@@ -41,6 +44,10 @@ class ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\Polyfill\\Php70\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -105,12 +112,23 @@ class ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27
         ),
     );
 
+    public static $classMap = array (
+        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
+        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitcede3bf0f978bd631eeccdabed1bbd27::$classMap;
 
         }, null, ClassLoader::class);
     }
