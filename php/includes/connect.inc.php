@@ -14,4 +14,3 @@ $db = substr($url["path"], 1);
 $connect = new mysqli($server, $username, $password, $db);
  
 
-JUST DO IT
