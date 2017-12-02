@@ -4,7 +4,7 @@
     if(isset($_SESSION['user_id'])){
 ?>
 
-
+<title>Todolist | Userpage</title>
 
 <div class="index-container">
     <div class="header">
@@ -27,7 +27,11 @@
             <form enctype="multipart/form-data" method="POST" action="./php/includes/updateProfile.inc.php">
                     <div id="userpg-pic" class="userpg-wrapper">
                         <div class="userpg-label">
-                        <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>" alt="">
+                        <?php if($_SESSION['user_profilepic']){?>
+                            <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>"  alt="userimg">
+                        <?php }else{ ?>
+                            <img src="./uploads/default.png"  alt="userimg">
+                        <?php }; ?>
                         </div>
 
                         <div class="userpg-input">

@@ -3,6 +3,7 @@
     include './php/includes/header.inc.php';
 
 ?>
+<title>Login</title>
     <?php if(isset($_SESSION["user_id"])){
         header("Location: index.php");
         exit();
@@ -21,7 +22,7 @@
                 <form method="POST" action="./php/includes/login.inc.php">
                     <input placeholder="Username" type="text" name="username-login">
                     
-                    <input placeholder="Password" type="text" name="password-login">
+                    <input placeholder="Password" type="password" name="password-login">
                     <input type="submit" value="Login" name="login-submit">
                 </form>
 

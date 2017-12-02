@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2017 at 12:29 AM
+-- Generation Time: Dec 02, 2017 at 05:23 AM
 -- Server version: 5.7.19-log
 -- PHP Version: 5.6.25
 
@@ -44,16 +44,17 @@ CREATE TABLE `users` (
   `user_name` varchar(255) NOT NULL,
   `user_email` varchar(255) NOT NULL,
   `user_pwd` varchar(255) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `user_profilepic` tinyint(4) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_name`, `user_email`, `user_pwd`, `user_id`) VALUES
-('username', 'email@gmail.com', '$2y$10$8HmEqgAyvgB.9MAB6RBnCOqsmk8v7vBsUpMViAIAM5FFnXS8Num.a', 1),
-('nameuser', 'email@gmail.com', '$2y$10$b3cAEFU7qEh0imT6DrjOYefjfXRU6JV9s8DDOt3/DG6FBwo0Z.x8G', 3);
+INSERT INTO `users` (`user_name`, `user_email`, `user_pwd`, `user_id`, `user_profilepic`) VALUES
+('username', 'email@gmail.com', '$2y$10$8HmEqgAyvgB.9MAB6RBnCOqsmk8v7vBsUpMViAIAM5FFnXS8Num.a', 1, 0),
+('Berty', 'email@gmail.com', '$2y$10$b3cAEFU7qEh0imT6DrjOYefjfXRU6JV9s8DDOt3/DG6FBwo0Z.x8G', 3, 1);
 
 --
 -- Indexes for dumped tables
@@ -80,7 +81,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --

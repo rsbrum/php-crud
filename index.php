@@ -12,14 +12,18 @@
 ?>
 
 <?php if(isset($_SESSION['user_id'])){  ?>
-
+<title>Todolist</title>
 <div class="index-container">
 
     <div id="header" class="header">
 
         <div id="user-info">
             <div id="img">
-                <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>"  alt="userimg">
+                <?php if($_SESSION['user_profilepic']){?>
+                    <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>"  alt="userimg">
+                <?php }else{ ?>
+                    <img src="./uploads/default.png"  alt="userimg">
+                <?php }; ?>
             </div>
             <div id="user-name">
                     <p id="username"><?php echo $_SESSION['user_name']; ?></p>

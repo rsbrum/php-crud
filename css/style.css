@@ -17,15 +17,9 @@ a{
     transition: 0.5s;
 }
 
-/* 
-@media (min-width: 1200px){
-} */
 
 
-
-
-
-
+@media (min-width: 1000px){
 
 
 /***** LOGIN/SIGNUP *****/ 
@@ -88,7 +82,7 @@ a{
 .index-container{
     min-height: 800px;
     height: auto;
-    min-width: 1200px;
+    width: 1200px;
     display: flex;
     flex-direction:column;
     margin: auto;
@@ -97,7 +91,7 @@ a{
 .header{
     background: white;
     width: 90%;
-    height: 25%;
+    height: 30%;
     display: flex;
     margin: 0 auto;
 }
@@ -154,6 +148,16 @@ a{
     border: 2px solid rgb(114, 114, 114);
     float: left;
     background: rgb(114, 114, 114);
+    transition: 0.5s;
+}
+
+#form-item input[type="submit"]:hover {
+    color: white;
+    padding: 10px;
+    border: 2px solid rgb(29, 29, 29);
+    float: left;
+    background: rgb(29, 29, 29);
+    cursor: pointer;
 }
 
 #user-options{
@@ -201,6 +205,12 @@ a{
 
 #no-items p{
     margin: auto;
+    transition: 0.3s;
+}
+
+#no-items p:hover{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .content{
@@ -226,7 +236,10 @@ a{
     display: flex;
     flex: 10;
     text-align: justify;
+    transition: 0.5s;
 }
+
+
 
 .description p{
     margin: auto;
@@ -234,7 +247,6 @@ a{
 }
 .button{
     display: flex;
-    
     flex: 0.5;
 }
 
@@ -247,7 +259,24 @@ a{
     height: 100%;
     width: 100%;
     color: white;
+    transition: 0.5s;
 }
+
+.button button:hover{
+    background: rgb(29, 29, 29);
+    cursor: pointer;
+}
+
+.button:hover ~ .description{
+    text-decoration: line-through;
+}
+
+.edit{
+    margin: auto;
+    background: red;
+}
+
+
 /***** END INDEX *****/
 
 
@@ -320,11 +349,9 @@ a{
 
 #userpg-pic{
     width: 30%;
-    height: 10%;
+    height: 20%;
     display: flex;
-    margin-bottom: 40px;
 }
-
 #userpg-pic img{
     margin: auto;
 }
@@ -352,3 +379,385 @@ a{
 }
 
 /***** END USERPAGE *****/
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************      MOBILE  ****************************/
+/********************      MOBILE  ****************************/
+/********************      MOBILE  ****************************/
+/********************      MOBILE  ****************************/
+/********************      MOBILE  ****************************/
+
+@media (max-width: 999px){
+    
+    
+    /***** LOGIN/SIGNUP *****/ 
+    
+    .login-signup-container{
+        display: flex;
+        height: 100%;
+    }
+    
+    .box{
+        background: white;
+        width: 600px;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        border-radius: 20px;
+    }
+    
+    .forms{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .forms input{
+        background: rgb(214, 214, 214);
+        display: block;
+        border: none;
+        padding: 10px;
+        margin: 5px auto;
+        border-radius: 5px;
+        
+    }
+    
+    .forms input[type="submit"]{
+        background: rgb(46, 46, 46);
+        color:white;
+    }
+    
+    .forms input[type="submit"]:hover{
+        cursor: pointer;
+    }
+    
+    .forms p{
+        font-size: 12px;
+    }
+    
+    /***** END LOGIN/SIGNUP *****/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* INDEX */ 
+    
+    .index-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        margin: auto;
+    }
+    
+    .header{
+        background: white;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        margin: 0 auto;
+    }
+    
+    #wrapper-header{
+        display: flex;
+        flex-direction: column;
+        flex: 10;
+    }
+    
+    #user-info{
+        display: flex;
+        flex: 3;
+        border-right:1px groove rgb(214, 214, 214);
+        flex-direction: column;
+    }
+    
+    #img{
+        flex: 5;
+        display: flex;
+    }
+    
+    
+    #img img{
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        margin: auto;
+    }
+    
+    #user-name{
+        flex: 0.5;
+        text-align: center;
+    }
+    
+    #form-item{
+        flex: 10;
+        display: flex;
+    }
+    
+    #form-item form{
+        margin: auto;
+    }
+    
+    #form-item input[type="text"]{
+        padding: 10px;
+        float: left;
+        width: 200px;
+    }
+    
+    #form-item input[type="submit"]{
+        color: white;
+        padding: 10px;
+        border: 2px solid rgb(114, 114, 114);
+        float: left;
+        background: rgb(114, 114, 114);
+        transition: 0.5s;
+    }
+    
+    #form-item input[type="submit"]:hover {
+        color: white;
+        padding: 10px;
+        border: 2px solid rgb(29, 29, 29);
+        float: left;
+        background: rgb(29, 29, 29);
+        cursor: pointer;
+    }
+    
+    #user-options{
+        flex: 1.5;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    
+    #options-list{
+        width: 50%;
+    }
+    
+    #list{
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: right;
+    }
+    
+    #list li{
+        float: left;
+        padding: 3px;
+    
+    }
+    
+    
+    #wrapper-item{
+        flex: 10;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #username{
+        font-weight: bold;
+    }
+    
+    #no-items{
+        border-radius: 8px;
+        width: 80%;
+        height: 10%;
+        margin: auto;
+        display: flex;
+    }
+    
+    #no-items p{
+        margin: auto;
+        transition: 0.3s;
+    }
+    
+    #no-items p:hover{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .content{
+        border-top: 1px groove rgb(214, 214, 214);
+        background: white;
+        width: 100%;
+        min-height: 500px;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    
+    .item{
+        background: rgb(214, 214, 214);
+        border-radius: 8px;
+        width: 80%;
+        height: 10%;
+        margin: 20px auto;
+        display: flex;
+    }
+    
+    .description{
+        display: flex;
+        flex: 10;
+        text-align: justify;
+        transition: 0.5s;
+    }
+    
+    
+    
+    .description p{
+        margin: auto;
+        margin-left: 10px;
+    }
+    .button{
+        display: flex;
+        flex: 0.5;
+    }
+    
+    .button button{
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background: rgb(114, 114, 114);
+        margin: auto;
+        border: none;
+        height: 100%;
+        width: 100%;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .button button:hover{
+        background: rgb(29, 29, 29);
+        cursor: pointer;
+    }
+    
+    .button:hover ~ .description{
+        text-decoration: line-through;
+    }
+    
+    .edit{
+        margin: auto;
+        background: red;
+    }
+    
+    
+    /***** END INDEX *****/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /***** USERPAGE *****/
+    
+    #profile-info{
+        flex: 4;
+        display: flex;
+    }
+    
+    #profile-info{
+        text-align: left;
+    }
+    
+    #profile-info h1{
+        margin: auto;
+    }
+    
+    #profile-info li{
+        padding:4px;
+    }
+    
+    #profile-info h1{
+        text-align: center;
+    }
+    
+    #userpg-form{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    #userpg-uinfo{
+        flex: 5;
+        margin-top: 30px; 
+    }
+    
+    .userpg-wrapper{
+        height: 5%;
+        width: 28%;
+        margin: 20px auto;
+        display: flex;
+    }
+    
+    .userpg-label{
+        text-align: center;
+        flex: 4;
+        display: flex;
+    }
+    
+    .userpg-label p{
+        margin: auto;
+    }
+    
+    .userpg-label img{
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }
+    
+    #userpg-pic{
+        width: 30%;
+        height: 20%;
+        display: flex;
+    }
+    #userpg-pic img{
+        margin: auto;
+    }
+    
+    #userpg-pic input{
+        padding: 10px;
+    }
+    
+    .userpg-input{
+    
+        flex: 9;
+        display: flex;
+    }
+    
+    .userpg-input input{
+        margin: auto;
+        padding: 5px;
+    }
+    
+    .userpg-input input:read-only, input:disabled{
+        background: rgb(207, 207, 207);
+        border: none;
+        padding: 5px;
+    
+    }
+    
+    /***** END USERPAGE *****/
+    } 
