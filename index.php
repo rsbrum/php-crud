@@ -21,10 +21,8 @@
             <div id="img">
                 <?php if($_SESSION['user_profilepic']){?>
                     <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>"  alt="userimg">
-                    <div class="edit">EDIT</div>
                 <?php }else{ ?>
                     <img src="./uploads/default.png"  alt="userimg">
-                    <div class="edit"> <span> EDIT</span></div>
                 <?php }; ?>
             </div>
             <div id="user-name">
