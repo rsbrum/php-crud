@@ -34,16 +34,15 @@
                     if($fileSize < 500000){
                         
                         $fileNewName =  "profilepic".$_SESSION['user_id'].".".$fileExt;
-                        echo $fileNewName;
-                        echo $fileTemp;
+
                         $fileDestination = '../../uploads/'.$fileNewName;
                         
                         if(move_uploaded_file($fileTemp, $fileDestination)){
                             
                             //sets profile pic to true
                             $val = 1;
-                            $stmt = $connect->prepare("INSERT INTO users(user_profilepic) VALUES(?)");
-                            $stmt->bind_param("i", $val);
+                            $stmt = $connect->prepare("UPDATE users SET user_profilepic= ? WHERE user_id= ? ");
+                            $stmt->bind_param("is", $val, $userID);
                             $stmt->execute();
                             $stmt->close();
 

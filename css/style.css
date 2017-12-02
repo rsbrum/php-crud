@@ -97,7 +97,7 @@ a{
 .header{
     background: white;
     width: 90%;
-    height: 25%;
+    height: 30%;
     display: flex;
     margin: 0 auto;
 }
@@ -154,6 +154,16 @@ a{
     border: 2px solid rgb(114, 114, 114);
     float: left;
     background: rgb(114, 114, 114);
+    transition: 0.5s;
+}
+
+#form-item input[type="submit"]:hover {
+    color: white;
+    padding: 10px;
+    border: 2px solid rgb(29, 29, 29);
+    float: left;
+    background: rgb(29, 29, 29);
+    cursor: pointer;
 }
 
 #user-options{
@@ -201,6 +211,12 @@ a{
 
 #no-items p{
     margin: auto;
+    transition: 0.3s;
+}
+
+#no-items p:hover{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .content{
@@ -226,7 +242,10 @@ a{
     display: flex;
     flex: 10;
     text-align: justify;
+    transition: 0.5s;
 }
+
+
 
 .description p{
     margin: auto;
@@ -234,7 +253,6 @@ a{
 }
 .button{
     display: flex;
-    
     flex: 0.5;
 }
 
@@ -247,7 +265,24 @@ a{
     height: 100%;
     width: 100%;
     color: white;
+    transition: 0.5s;
 }
+
+.button button:hover{
+    background: rgb(29, 29, 29);
+    cursor: pointer;
+}
+
+.button:hover ~ .description{
+    text-decoration: line-through;
+}
+
+.edit{
+    margin: auto;
+    background: red;
+}
+
+
 /***** END INDEX *****/
 
 
@@ -320,11 +355,9 @@ a{
 
 #userpg-pic{
     width: 30%;
-    height: 10%;
+    height: 20%;
     display: flex;
-    margin-bottom: 40px;
 }
-
 #userpg-pic img{
     margin: auto;
 }

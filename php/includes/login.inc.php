@@ -51,7 +51,7 @@
 
             if($pwdverify){
 
-                $stmt2 = $connect->prepare("SELECT user_name, user_id, user_email FROM users WHERE user_name=?");
+                $stmt2 = $connect->prepare("SELECT user_name, user_id, user_email, user_profilepic FROM users WHERE user_name=?");
                 $stmt2->bind_param("s", $username);
                 $stmt2->execute();
                 $result = $stmt2->get_result();
@@ -60,6 +60,7 @@
                     $_SESSION['user_id'] = $row['user_id'];
                     $_SESSION['user_email'] = $row['user_email'];
                     $_SESSION['user_name'] = $row['user_name'];
+                    $_SESSION['user_profilepic'] = $row['user_profilepic'];
                 }
                  
                 unset($_SESSION['errormsg']);
