@@ -421,11 +421,11 @@ a{
     
     .box{
         background: white;
-        width: 600px;
-        height: 500px;
+        width: 100%;
+        height: 100%;
         margin: auto;
         display: flex;
-        border-radius: 20px;
+
     }
     
     .forms{
@@ -606,7 +606,6 @@ a{
         border-top: 1px groove rgb(214, 214, 214);
         background: white;
         width: 100%;
-        min-height: 500px;
         height: auto;
         margin: 0 auto;
     }
@@ -656,15 +655,7 @@ a{
         cursor: pointer;
     }
     
-    .button:hover ~ .description{
-        text-decoration: line-through;
-    }
-    
-    .edit{
-        margin: auto;
-        background: red;
-    }
-    
+
     
     /***** END INDEX *****/
     
