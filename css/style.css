@@ -528,7 +528,7 @@ a{
     #form-item input[type="text"]{
         padding: 10px;
         float: left;
-        width: 200px;
+        width: 100px;
     }
     
     #form-item input[type="submit"]{
