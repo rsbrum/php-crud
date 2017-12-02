@@ -543,10 +543,7 @@ a{
     }
     
     #form-item input[type="submit"]:hover {
-        color: white;
-        padding: 10px;
         border: 2px solid rgb(29, 29, 29);
-        float: left;
         background: rgb(29, 29, 29);
         cursor: pointer;
     }
