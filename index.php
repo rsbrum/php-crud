@@ -3,86 +3,85 @@
     include "./php/includes/header.inc.php";
     include "./php/includes/connect.inc.php";
 
-    $stmt = $connect->prepare("SELECT * FROM items WHERE item_user=?");
+    $stmt = $connect->prepare("SELECT * FROM items WHERE item_user=? ORDER BY item_id DESC");
     $stmt->bind_param("s", $_SESSION['user_id']);
     $stmt->execute();
 
     $result = $stmt->get_result();
 
 ?>
+    <title>Todolist</title>
 
 <?php if(isset($_SESSION['user_id'])){  ?>
-<title>Todolist</title>
-<div class="index-container">
 
-    <div id="header" class="header">
 
-        <div id="user-info">
-            <div id="img">
-                <?php if($_SESSION['user_profilepic']){?>
-                    <img src="./uploads/profilepic<?php echo $_SESSION['user_id']; ?>.jpg"  alt="userimg">
-                <?php }else{ ?>
-                    <img src="./uploads/default.png"  alt="userimg">
-                <?php }; ?>
+<div class="container">
+
+    <div class="content-wrapper">   
+
+        <div class="header">
+
+            <div class="wrapper-nav-bar">
+
+                <ul class="nav-bar">
+                    <li><a href="./userpage.php"><button>Profile</button></a></li>
+                    <li><a href="./php/includes/logout.inc.php?action=logout"><button>Logout</button></a></li>
+                </ul>
             </div>
-            <div id="user-name">
-                    <p id="username"><?php echo $_SESSION['user_name']; ?></p>
-            </div>
-        </div>
 
-        <div id="wrapper-item">
-            <div id="user-options">
-                <div id="options-list">
-                    <ul id="list">
-                        <li><a href="./userpage.php">Profile</a></li>
-                        <li><a href="#" >Stats </a></li>
-                        <li><a href="./php/includes/logout.inc.php?action=logout">Logout </a></li>
-                    </ul>
-                </div>
-        </div>
-
-        <div id="form-item">
-                <form method="POST" id="form-submit" action="./php/includes/addItem.inc.php">
-                    <input type="text" name="item-description" id="item-description" placeholder="What do you have to do?">
-                    <input type="submit" name="itemm-submit" id="itemm-submit">
+            <div class="wrapper-content-header">
+                <form id="form-item"  method="POST" action="">
+                    <input name="item-description" id="item-description" type="text">
+                    <input class="btn-submit" type="submit" name="item-submit" value="SUBMIT">
                 </form>
             </div>
+
         </div>
 
-    </div>
+        <div id="index-main" class="main">
 
-    <div id="content" class="content">
-
-        <?php 
-            if(mysqli_num_rows($result) > 0){
-                while($row = $result->fetch_assoc()){
-        ?>
-
-        <div class='item'>
-            <div class='description'>
-                    <p><?php echo $row['item_description'] ?></p>
-            </div>
+            <?php
             
-            <div class='button'>
-                <button onclick="deleteItem(<?php echo $row['item_id']; ?>)"> X </button>
+            //checks if there is any item from user
+                if(mysqli_num_rows($result) > 0){
+                    while($row = $result->fetch_assoc()){
+            ?>
+
+            <div id="<?php echo $row['item_id']; ?>" class="wrapper-item">
+                <div class="item-description">
+                        <p><?php echo $row['item_description']; ?></p>
+                </div>
+
+                <div class="item-btn">
+                    <button onclick='deleteItem(<?php echo $row['item_id']; ?>)'>X</button>
+                </div>
             </div>
-        </div>
 
         <?php            
                 }
             }else{
         ?>
+            <div id="no-item">
+                <p>uhh...ah</p>
+            </div>
+        <?php } ?>
 
-        <div id='no-items'>
-            <p>There are no tasks to be done</p>
+            
         </div>
 
-        <?php } ?>
     </div>
 
+</div>
+
+
+
+
+
+
+        
         <script>
 
-        document.getElementById("form-submit").addEventListener("submit", addItem);
+        document.getElementById("form-item").addEventListener("submit", addItem);
         
 
         function addItem(e){
@@ -96,7 +95,7 @@
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.send("item-description="+description);
         request.onload = function(){
-            document.getElementById("content").innerHTML = this.responseText;
+            document.getElementById("index-main").innerHTML = this.responseText;
         }
 
         document.getElementById("item-description").value = "";
@@ -111,14 +110,13 @@
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             request.send("deleteItem="+item);
             request.onload = function(){
-                document.getElementById("content").innerHTML = this.responseText;
-                console.log(this.responseText);
+                document.getElementById("index-main").innerHTML = this.responseText;
             }
             
         }
         </script>
 
-</div>
+
 
 <?php }else{
 

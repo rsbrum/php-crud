@@ -1,0 +1,40 @@
+
+@media(min-width: 769px){
+
+    #userpage-content-wrapper .main{
+        display: flex;
+    }
+
+    #userpage-content-wrapper .table-item2{
+        width: 250px;
+    } 
+
+    #userpage-content-wrapper input[type="submit"]{
+        display: inline;
+        margin: 10px;
+    }
+
+    #userpage-content-wrapper{
+        height: 80%;
+    }
+}
+
+@media(max-width: 768px){
+    #userpage-content-wrapper .main{
+        display: flex;
+    }
+
+    #userpage-content-wrapper .table-item2{
+        width: 250px;
+    } 
+
+    #userpage-content-wrapper input[type="submit"]{
+        display: inline;
+        margin: 10px;
+    }
+
+    #userpage-content-wrapper{
+        height: 80%;
+    }
+
+}

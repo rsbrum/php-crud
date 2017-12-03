@@ -19,7 +19,7 @@
         
         //execute and gets update
         if($stmt->execute()){
-            $stmt2 = $connect->prepare("SELECT * FROM items WHERE item_user=?");
+            $stmt2 = $connect->prepare("SELECT * FROM items WHERE item_user=? ORDER BY item_id DESC");
             $stmt2->bind_param("s", $item_user);
             
             if($stmt2->execute()){
@@ -27,14 +27,15 @@
 
                 while($row = $result->fetch_assoc()){
                     $output .= "
-                    <div class='item'>
-                    <div class='description'>
-                        <p>".$row['item_description']."</p>
+                    <div id='".$row['item_id']."' class='wrapper-item'>
+                    <div class='item-description'>
+                            <p>".$row['item_description']."</p>
                     </div>
-                    <div class='button'>
-                        <button onclick='deleteItem(".$row['item_id'].")'> X </button>
+    
+                    <div class='item-btn'>
+                        <button onclick='deleteItem(".$row['item_id'].")'>X</button>
                     </div>
-                    </div>
+                </div>
                     ";
                 }
             }else{
@@ -48,6 +49,6 @@
             echo $output;
         }
     }else{
-        echo "you succ";
+        echo "form not submited";
     }
 

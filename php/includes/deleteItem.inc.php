@@ -17,7 +17,7 @@
             $stmt->close();
 
 
-            $stmt = $connect->prepare("SELECT * FROM items WHERE item_user=?");
+            $stmt = $connect->prepare("SELECT * FROM items WHERE item_user=? ORDER BY item_id DESC");
             $stmt->bind_param("s", $item_user);
             $stmt->execute();
 
@@ -27,20 +27,21 @@
                
                                 while($row = $result->fetch_assoc()){
                                     $output .= "
-                                    <div class='item'>
-                                    <div class='description'>
-                                        <p>".$row['item_description']."</p>
+                                    <div id='".$row['item_id']."' class='wrapper-item'>
+                                    <div class='item-description'>
+                                            <p>".$row['item_description']."</p>
                                     </div>
-                                    <div class='button'>
-                                        <button onclick='deleteItem(".$row['item_id'].")'> X </button>
+                    
+                                    <div class='item-btn'>
+                                        <button onclick='deleteItem(".$row['item_id'].")'>X</button>
                                     </div>
-                                    </div>
+                                </div>
                                     ";
                                 }
             }else{
                 $output = "
-                <div id='no-items'>
-                    <p>There are no tasks to be done</p>
+                <div id='no-item'>
+                    <p>uhh...ah</p>
                 </div>
                     ";
                 

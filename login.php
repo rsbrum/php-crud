@@ -9,31 +9,46 @@
         exit();
     }
     ?>
-    <div class="login-signup-container">
+<div class="container">
 
-        <div class="box">
-            <div class="forms">
+    <div id="login-content-wrapper" class="content-wrapper">
 
+        <div class="header">
+
+            <div class="wrapper-nav-bar">
+            </div>
+
+            <div class="wrapper-content-header">
+                <h1>Login</h1>
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="std-form">
+                <form id="login-form" method="POST" action="./php/includes/login.inc.php">
+                    
     <?php if(isset($_SESSION['errormsg'])){ ?>
         <?php echo $_SESSION['errormsg'];
               unset($_SESSION['errormsg']); ?>
     <?php } ?>
-
-                <form method="POST" action="./php/includes/login.inc.php">
-                    <input placeholder="Username" type="text" name="username-login">
-                    
-                    <input placeholder="Password" type="password" name="password-login">
-                    <input type="submit" value="Login" name="login-submit">
+                        <input placeholder="Username" type="text" name="username-login">        
+                        <input placeholder="Password" type="password" name="password-login">
+                        <input class="btn-submit" type="submit" value="Login" name="login-submit">
+                        <p><a href="signup.php">Sign up</a> or <a href="#"> use locally</a> </p> 
                 </form>
+                
 
-                <p><a href="signup.php">Sign up</a> or <a href="#"> use locally</a> </p>
-    
             </div>
         </div>
-        
-    </div>
-<?php 
 
+    </div>
+
+</div>
+
+
+
+<?php
 
     include './php/includes/footer.inc.php';
 
