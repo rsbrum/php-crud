@@ -17,7 +17,7 @@
 
 <div class="container">
 
-    <div class="content-wrapper">   
+    <div id="index-content-wrapper" class="content-wrapper">   
 
         <div class="header">
 
@@ -28,10 +28,10 @@
                     <li><a href="./php/includes/logout.inc.php?action=logout"><button>Logout</button></a></li>
                 </ul>
             </div>
-
+                <p>Hello, <span><?php echo $_SESSION['user_name']; ?></span></p>
             <div class="wrapper-content-header">
                 <form id="form-item"  method="POST" action="">
-                    <input name="item-description" id="item-description" type="text">
+                    <input placeholder="What do you have to do?" name="item-description" id="item-description" type="text">
                     <input class="btn-submit" type="submit" name="item-submit" value="SUBMIT">
                 </form>
             </div>
