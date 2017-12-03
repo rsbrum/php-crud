@@ -83,7 +83,7 @@
 
         #index-content-wrapper .btn-submit{
             display: block;
-            margin: 5px;
+            margin: 5px auto;
         }
 
 #index-main{
@@ -98,7 +98,7 @@
     border: 1px solid rgb(34, 34, 34);
     display: block;
     width: 300px;
-    float: left;
+    margin: auto;
 }
 
 #wrapper-form-item .btn-submit{
