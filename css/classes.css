@@ -9,6 +9,9 @@ ul{
     list-style: none;
 }
 
+a{
+    color: white;
+}
 @media(min-width: 769px){
     
 
@@ -16,10 +19,9 @@ ul{
     width: 100%;
     min-height: 100%;
     display: flex;
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: #4776E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 
     
@@ -29,7 +31,7 @@ ul{
     width: 80%;
     min-width: 1200px;
     min-height: 800px;
-    background: rgba(173, 173, 173, 0.1);
+    /* background: rgba(68, 84, 107, 0.3); */
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -43,7 +45,7 @@ ul{
 
     display: flex;
     flex-direction: column;
-    border-bottom: 0.02px solid rgb(255, 255, 255);
+    border-bottom: 0.02px solid rgb(0, 0, 0);
 }
         /*  NAVBAR  */
 .wrapper-nav-bar{
@@ -173,7 +175,7 @@ ul{
     height: 300px;
     width: 30%;
     margin: auto;
-    background: rgba(142,158,171,0.4);
+    background: rgba(34, 34, 34, 0.3);
     display: flex;
     border-radius: 5px;
 } 
@@ -227,9 +229,9 @@ ul{
         width: 100%;
         min-height: 550px;
         display: flex;
-        background: #8e9eab;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #4776E6;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     
     .content-wrapper{
@@ -247,7 +249,7 @@ ul{
         min-height: 150px;
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid rgb(255, 255, 255);
+        border-bottom: 0.02px solid rgb(0, 0, 0);
     }
             /*  NAVBAR  */
     .wrapper-nav-bar{
@@ -379,7 +381,7 @@ ul{
         height: 300px;
         width: 90%;
         margin: auto;
-        background: rgba(142,158,171,0.4);
+        background: rgba(2, 2, 2, 0.2);
         display: flex;
         border-radius: 5px;
     } 

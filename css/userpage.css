@@ -3,6 +3,7 @@
 
     #userpage-content-wrapper .main{
         display: flex;
+        
     }
 
     #userpage-content-wrapper .table-item2{
@@ -15,7 +16,7 @@
     }
 
     #userpage-content-wrapper{
-        height: 80%;
+        height: 100%;
     }
 }
 

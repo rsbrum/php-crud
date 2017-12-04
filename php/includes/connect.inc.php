@@ -1,10 +1,10 @@
 <?php   
 
 
-/* $connect = new mysqli("localhost", "root", "040182", "db_todolist");
- */
+ $connect = new mysqli("localhost", "root", "040182", "db_todolist");
+ 
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+/* $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $server = $url["host"];
 $username = $url["user"];
@@ -13,3 +13,4 @@ $db = substr($url["path"], 1);
 
 $connect = new mysqli($server, $username, $password, $db); 
  
+ */
