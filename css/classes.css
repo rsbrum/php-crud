@@ -15,15 +15,21 @@ ul{
 .container{
     width: 100%;
     min-height: 100%;
-    background: rgb(233, 233, 233);
     display: flex;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
+    
 }
 
 .content-wrapper{
     width: 80%;
     min-width: 1200px;
     min-height: 800px;
-    background: white;
+    background: rgba(173, 173, 173, 0.1);
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -37,7 +43,7 @@ ul{
 
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgb(114, 114, 114);
+    border-bottom: 0.02px solid rgb(255, 255, 255);
 }
         /*  NAVBAR  */
 .wrapper-nav-bar{
@@ -167,7 +173,7 @@ ul{
     height: 300px;
     width: 30%;
     margin: auto;
-    background: rgb(233, 233, 233);
+    background: rgba(142,158,171,0.4);
     display: flex;
     border-radius: 5px;
 } 
