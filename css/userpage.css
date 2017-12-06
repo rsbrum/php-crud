@@ -16,7 +16,8 @@
     }
 
     #userpage-content-wrapper{
-        height: 100%;
+        min-height: 100%;
+        height: auto;
     }
 }
 
@@ -35,7 +36,8 @@
     }
 
     #userpage-content-wrapper{
-        height: 100%;
+        min-height: 100%;
+        height: auto;
     }
 
 }
