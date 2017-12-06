@@ -5,6 +5,7 @@
 
 #index-main{
     display: block;
+    height: auto;
 }
 #form-item{
     margin: auto;
